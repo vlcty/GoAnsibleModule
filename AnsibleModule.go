@@ -93,10 +93,3 @@ func (module *AnsibleModule) ExitFailed(message string) {
 
 	result.mashalAndExit()
 }
-
-func main() {
-	module := NewAnsibleModule()
-	module.RequiredArguments = []string{"akey", "asecondkey"}
-	module.CheckRequiredArguments()
-	module.ExitUnchanged()
-}
